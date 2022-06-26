@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+:root {
+    --azul-marinho: #003366;
+    --azul-celeste: #1398be;
+    --laranja: #de9800;
+    --cinza: #cccccc;
+    --vermelho: #c91b04;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.content {
+    width: 60%;
+    border: 1px solid #dddddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Primeiros quatros da tabela */
+thead {
+    border-bottom: 3px solid #dddddd;
+}
+
+thead > tr:nth-child(2) > td:nth-child(1),
+thead > tr:nth-child(3) > td:nth-child(1),
+thead > tr:nth-child(4) > td:nth-child(1) {
+    color: var(--azul-marinho);
+}
+
+thead > tr:nth-child(5) > td:nth-child(1) {
+    color: var(--azul-celeste);
+}
+/* Meio da tabela */
+
+tbody {
+    border-bottom: 3px solid #dddddd;
+}
+
+tbody > tr > td:first-child {
+    color: var(--laranja);
+}
+
+tbody > tr:nth-last-child(1) > td:first-child,
+tbody > tr:nth-last-child(2) > td:first-child,
+tbody > tr:nth-last-child(3) > td:first-child,
+tbody > tr:nth-last-child(4) > td:first-child {
+    color: var(--cinza);
+}
+
+/* Final da tabela */
+tfoot > tr > td:first-child {
+    color: var(--vermelho);
+}
+
+th {
+    font-size: 13px;
+    font-weight: bold;
+    color: #999999;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    padding: 5px;
+}
+td {
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    border-bottom: 1px solid #dddddd;
+    padding: 5px;
+}
+
+tr > td:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+tr > td:nth-child(2) {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666666;
+}
+
+tr > td:nth-child(3) {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+tr > td:nth-child(3),
+tr > td:nth-child(5),
+tr > td:nth-child(7),
+tr > td:nth-child(9),
+tr > td:nth-child(11) {
+    background-color: #f7f7f7;
+}
+
+/* Legenda */
+footer {
+    margin: 10px;
+    font-size: 10px;
+    color: #8f8f8f;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer > * {
+    margin: 3px;
+}
+
+footer > div.azul-escuro {
+    width: 10px;
+    height: 10px;
+    background-color: var(--azul-marinho);
+}
+footer > div.azul {
+    width: 10px;
+    height: 10px;
+    background-color: var(--azul-celeste);
+}
+footer > div.amarelo {
+    width: 10px;
+    height: 10px;
+    background-color: var(--laranja);
+}
+footer > div.vermelho {
+    width: 10px;
+    height: 10px;
+    background-color: var(--vermelho);
+}
+
+footer > p.siglas {
+    font-size: 10px;
+    color: #555555;
+}
